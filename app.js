@@ -29,18 +29,19 @@ angular.module('app').directive('showMore', [function() {
         replace: true,
         scope: {
             text: '=',
+            limit:'='
         },
 
         template: '<div><p ng-show="largeText"> {{ text | subString :0 :end }}.... <a href="javascript:;" ng-click="showMore()" ng-show="isShowMore">Show More</a><a href="javascript:;" ng-click="showLess()" ng-hide="isShowMore">Show Less </a></p><p ng-hide="largeText">{{ text }}</p></div> ',
 
         link: function(scope, iElement, iAttrs) {
 
-            var defaultEnd = 170;
-            scope.end = defaultEnd;
+            
+            scope.end = scope.limit;
             scope.isShowMore = true;
             scope.largeText = true;
 
-            if (scope.text.length <= defaultEnd) {
+            if (scope.text.length <= scope.limit) {
                 scope.largeText = false;
             };
 
@@ -52,7 +53,7 @@ angular.module('app').directive('showMore', [function() {
 
             scope.showLess = function() {
 
-                scope.end = defaultEnd;
+                scope.end = scope.limit;
                 scope.isShowMore = true;
             };
         }
