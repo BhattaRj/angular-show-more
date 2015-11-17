@@ -1,9 +1,9 @@
 # angular-show-more
 AngularJS directive that limit text and adds show more / show less links to your text when it exeeds certain limit of characters. Only angularjs is required.
 
-##jsfiddle demo
+##Codepen demo
 
-[Codepen demo](http://jsfiddle.net/janakbhatta/0p6j9ghk/ "JsFiddle: AngularJS Show More Directive")
+[Codepen demo](http://codepen.io/BhattaRj/pen/GpzPqY?editors=001 "JsFiddle: AngularJS Show More Directive")
 
 
 ## Install client side
