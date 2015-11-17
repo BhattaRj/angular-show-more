@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body ng-app="app" ng-controller="mainCtrl">
+        Angularjs Show More Show Less Example.
+        <ul>
+            <li ng-repeat="book in books">
+                Name :{{ book.name }} <br>Description:&nbsp;<show-more text="book.descripton"> </show-more>
+            </li>
+        </ul>
+    </body>
+</html>
